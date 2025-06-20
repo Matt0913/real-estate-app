@@ -1,0 +1,16 @@
+
+:root { --primary:#005b99; --light:#fff; --dark:#222; }
+
+body { margin:0; font-family:system-ui,sans-serif; line-height:1.5; }
+header { background:var(--primary); color:var(--light); padding:.75rem 1rem; }
+header a { color:var(--light); text-decoration:none; }
+
+.hero { padding:2rem 1rem; text-align:center; }
+form { display:flex; flex-direction:column; gap:.5rem; max-width:320px; margin:auto; }
+input, button { padding:.5rem; font-size:1rem; }
+
+.grid { display:grid; gap:1rem; padding:1rem; }
+@media (min-width:600px) {
+  .grid { grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); }
+}
+.card { border:1px solid #ddd; padding:1rem; border-radius:6px; }

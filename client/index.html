@@ -1,1 +1,33 @@
 <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="css/main.css" />
+  <title>My Real-Estate</title>
+</head>
+<body>
+<header>
+  <h1><a href="index.html">Real-Estate Demo</a></h1>
+</header>
+
+<section class="hero">
+  <h2>Find your next home</h2>
+  <form id="searchForm">
+    <input name="location" placeholder="Location" />
+    <input name="min"     type="number" placeholder="Min price" />
+    <input name="max"     type="number" placeholder="Max price" />
+    <button>Search</button>
+  </form>
+</section>
+
+<script>
+document.getElementById("searchForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const params = new URLSearchParams(new FormData(e.target)).toString();
+  window.location = `listings.html?${params}`;
+});
+</script>
+</body>
+</html>
+
